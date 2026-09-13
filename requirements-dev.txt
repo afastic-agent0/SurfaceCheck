@@ -1,0 +1,2 @@
+# Test-only certificate generation; the application has no third-party runtime dependencies.
+cryptography>=43
