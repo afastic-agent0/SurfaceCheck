@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "tool": "SurfaceCheck",
+  "version": "0.1.0",
+  "generated_at": "2026-09-13T04:58:18.814027+00:00",
+  "results": [
+    {
+      "target": "http://127.0.0.1:58497/",
+      "status": "ok",
+      "http_status": 200,
+      "tls": null,
+      "findings": [
+        {
+          "code": "HTTP_PLAINTEXT",
+          "severity": "medium",
+          "message": "This URL uses unencrypted HTTP.",
+          "remedy": "Use HTTPS; this observation does not establish whether HTTPS is available."
+        }
+      ],
+      "duration_ms": 0
+    }
+  ]
+}
