@@ -10,6 +10,16 @@ Local validation on 2026-09-13:
 
 An initial run exposed a Windows sandbox interaction with Python temporary directories using restrictive ACLs. Disposable test fixtures now inherit parent ACLs. The application report writer still uses `NamedTemporaryFile`; atomic report replacement passed integration testing.
 
-The GitHub Actions matrix is configured for macOS, Ubuntu and Windows with Python 3.11, 3.12 and 3.13. Those remote jobs have **not yet been run**. Local success must not be represented as macOS/Linux validation or a full security audit.
+## GitHub Actions validation — 2026-09-19
+
+All nine jobs passed in [CI run 35441649897](https://github.com/afastic-agent0/SurfaceCheck/actions/runs/35441649897) for commit `d5d0ce69d4b3f7d2cf628dbeb268e012f8d7c028`:
+
+| Platform | Python versions | Result |
+| --- | --- | --- |
+| Windows | 3.11, 3.12, 3.13 | All passed |
+| macOS | 3.11, 3.12, 3.13 | All passed |
+| Ubuntu | 3.11, 3.12, 3.13 | All passed |
+
+Each job installs the package and test dependencies, runs the 21-test suite, and checks the installed `surfacecheck --version` entry point. The same 21 tests also passed again locally on 2026-09-19. Subsequent release-preparation changes only update documentation and ignore rules; the validated Python source and tests are unchanged.
 
 No live-site vulnerability assessment or third-party security review has been performed.
