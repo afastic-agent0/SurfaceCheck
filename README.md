@@ -1,6 +1,8 @@
-# SurfaceCheck (POC)
+# SurfaceCheck 1.0 (POC)
 
 A small TLS and HTTP security posture checker for explicitly supplied URLs. It complements [NetScannerMacOS](https://github.com/afastic-agent0/NetScannerMacOS): discover a service there, then inspect its HTTP(S) endpoint here.
+
+Version 1.0.0 retains the focused POC scope below. The version number does not imply a comprehensive security audit or production-readiness certification. The example report records the earlier 0.1.0 local fixture run.
 
 SurfaceCheck uses Python 3.11+ and the standard library. It does not require root, packet capture, API keys or an LLM. Intended for macOS, Linux and Windows; see [validation evidence](docs/VALIDATION.md) for platforms actually tested.
 
